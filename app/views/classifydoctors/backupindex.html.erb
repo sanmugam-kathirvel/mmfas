@@ -1,0 +1,44 @@
+<h1>Listing classifydoctors</h1>
+
+<table>
+  <tr>
+    <th>Town</th>
+    <th>Ophthalmologist</th>
+    <th>Physiologists</th>
+    <th>Neurosurgeons</th>
+    <th>Cardiologist</th>
+    <th>Allopathy</th>
+    <th>Pediatrician</th>
+    <th>Urologists</th>
+    <th>Surgeons</th>
+    <th>Other</th>
+    <th>Total</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @classifydoctors.each do |classifydoctor| %>
+  <tr>
+    <td><%= classifydoctor.town.town %></td>
+    <td><%= classifydoctor.ophthalmologist %></td>
+    <td><%= classifydoctor.physiologists %></td>
+    <td><%= classifydoctor.neurosurgeons %></td>
+    <td><%= classifydoctor.cardiologist %></td>
+    <td><%= classifydoctor.allopathy %></td>
+    <td><%= classifydoctor.pediatrician %></td>
+    <td><%= classifydoctor.urologists %></td>
+    <td><%= classifydoctor.surgeons %></td>
+    <td><%= classifydoctor.other %></td>
+    <%classifydoctor.total=classifydoctor.ophthalmologist.to_i+classifydoctor.physiologists.to_i+classifydoctor.neurosurgeons.to_i+classifydoctor.cardiologist.to_i+classifydoctor.allopathy.to_i+classifydoctor.pediatrician.to_i+classifydoctor.urologists.to_i+classifydoctor.surgeons.to_i+classifydoctor.other.to_i%>
+    <td><%= classifydoctor.total %></td>
+    <td><%= link_to 'Show', classifydoctor %></td>
+    <td><%= link_to 'Edit', edit_classifydoctor_path(classifydoctor) %></td>
+    <td><%= link_to 'Destroy', classifydoctor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Classifydoctor', new_classifydoctor_path %>

@@ -1,0 +1,43 @@
+<h1>Listing admin_classifydoctors</h1>
+
+<table>
+  <tr>
+    <th>Town</th>
+    <th>Ophthalmologist</th>
+    <th>Physiologists</th>
+    <th>Neurosurgeons</th>
+    <th>Cardiologist</th>
+    <th>Allopathy</th>
+    <th>Pediatrician</th>
+    <th>Urologists</th>
+    <th>Surgeons</th>
+    <th>Other</th>
+    <th>Total</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_classifydoctors.each do |admin_classifydoctor| %>
+  <tr>
+    <td><%= admin_classifydoctor.town %></td>
+    <td><%= admin_classifydoctor.ophthalmologist %></td>
+    <td><%= admin_classifydoctor.physiologists %></td>
+    <td><%= admin_classifydoctor.neurosurgeons %></td>
+    <td><%= admin_classifydoctor.cardiologist %></td>
+    <td><%= admin_classifydoctor.allopathy %></td>
+    <td><%= admin_classifydoctor.pediatrician %></td>
+    <td><%= admin_classifydoctor.urologists %></td>
+    <td><%= admin_classifydoctor.surgeons %></td>
+    <td><%= admin_classifydoctor.other %></td>
+    <td><%= admin_classifydoctor.total %></td>
+    <td><%= link_to 'Show', admin_classifydoctor %></td>
+    <td><%= link_to 'Edit', edit_admin_classifydoctor_path(admin_classifydoctor) %></td>
+    <td><%= link_to 'Destroy', admin_classifydoctor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Classifydoctor', new_admin_classifydoctor_path %>

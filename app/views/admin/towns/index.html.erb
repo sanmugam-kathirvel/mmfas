@@ -1,0 +1,23 @@
+<h1>Listing admin_towns</h1>
+
+<table>
+  <tr>
+    <th>Town</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_towns.each do |admin_town| %>
+  <tr>
+    <td><%= admin_town.town %></td>
+    <td><%= link_to 'Show', admin_town %></td>
+    <td><%= link_to 'Edit', edit_admin_town_path(admin_town) %></td>
+    <td><%= link_to 'Destroy', admin_town, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Town', new_admin_town_path %>

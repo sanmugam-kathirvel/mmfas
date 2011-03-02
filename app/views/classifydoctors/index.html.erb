@@ -1,0 +1,65 @@
+<h1>Listing classifydoctors</h1>
+<center> 
+<table border=0>
+<tr> 
+  <td width="150" height="15" align=center >Name :</td> 
+  <td width="300" height="15" align=center ></td> 
+  <td width="100" height="15" align=center >H.Q. :<td> 
+  <td width="150" height="15" align=center ></td> 
+  <td width="150" height="15" align=center >REGION :</td> 
+  <td width="200" height="15" align=center ></td> 
+  <td width="150" height="15" align=center >CODE NO:</td> 
+  
+</tr> 
+</table>
+<table border=1>
+
+<tr> 
+  <td width="45" height="15" align=center rowspan=2>S NO</td> 
+  <td width="300" height="20" align=center rowspan=2>TOWN LOCALITY NAME</td>
+   
+  <td width="1000" height="15" align=cente colspan=9> <CENTER>SPECILIZATION<CENTER></td>
+  
+  <td width="45" height="15" align=center >&nbsp;</td>
+</tr> 
+
+<tr> 
+  <td width="5" height="15" align=center >OBG</td>
+  <td width="5" height="15" align=center >PHY</td> 
+  <td width="45" height="15" align=center >NEUR SUR/PHY</td> 
+  <td width="45" height="15" align=center >CH PHY</td> 
+ 
+  <td width="45" height="15" align=center >G.P.S  ALLOPATHY</td>
+  
+  <td width="45" height="15" align=center >PED</td> 
+  <td width="45" height="15" align=center >URO</td> 
+  <td width="45" height="15" align=center >SUR</td> 
+  <td width="45" height="15" align=center >OTH</td> 
+  <td width="45" height="15" align=center >TOTAL</td> 
+</tr>  
+
+<% @classifydoctors.each_with_index do |classifydoctor,index| %>
+  <tr>
+    <td><%= index+1 %></td>
+    <td><%= classifydoctor.town.town %></td>
+    <td><%= classifydoctor.ophthalmologist %></td>
+    <td><%= classifydoctor.physiologists %></td>
+    <td><%= classifydoctor.neurosurgeons %></td>
+    <td><%= classifydoctor.cardiologist %></td>
+    <td><%= classifydoctor.allopathy %></td>
+    <td><%= classifydoctor.pediatrician %></td>
+    <td><%= classifydoctor.urologists %></td>
+    <td><%= classifydoctor.surgeons %></td>
+    <td><%= classifydoctor.other %></td>
+    <%classifydoctor.total=classifydoctor.ophthalmologist.to_i+classifydoctor.physiologists.to_i+classifydoctor.neurosurgeons.to_i+classifydoctor.cardiologist.to_i+classifydoctor.allopathy.to_i+classifydoctor.pediatrician.to_i+classifydoctor.urologists.to_i+classifydoctor.surgeons.to_i+classifydoctor.other.to_i%>
+    <td><%= classifydoctor.total %></td>
+    <td><%= link_to 'Show', classifydoctor %></td>
+    <td><%= link_to 'Edit', edit_classifydoctor_path(classifydoctor) %></td>
+    <td><%= link_to 'Destroy', classifydoctor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table> 
+</center> 
+</body> 
+</html> 
+ <%= link_to 'New Classifydoctor', new_classifydoctor_path %>

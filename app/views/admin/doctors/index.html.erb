@@ -1,0 +1,25 @@
+<h1>Listing admin_doctors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Doctor type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_doctors.each do |admin_doctor| %>
+  <tr>
+    <td><%= admin_doctor.name %></td>
+    <td><%= admin_doctor.doctor_type %></td>
+    <td><%= link_to 'Show', admin_doctor %></td>
+    <td><%= link_to 'Edit', edit_admin_doctor_path(admin_doctor) %></td>
+    <td><%= link_to 'Destroy', admin_doctor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Doctor', new_admin_doctor_path %>
