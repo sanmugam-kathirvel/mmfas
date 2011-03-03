@@ -1,0 +1,21 @@
+<%= form_for(@headquator) do |f| %>
+  <% if @headquator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@headquator.errors.count, "error") %> prohibited this headquator from being saved:</h2>
+
+      <ul>
+      <% @headquator.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :head_quator %><br />
+    <%= f.text_field :head_quator %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

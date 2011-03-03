@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110302200450) do
+ActiveRecord::Schema.define(:version => 20110303104330) do
 
   create_table "admin_classifydoctors", :force => true do |t|
     t.integer  "town_id"
@@ -79,6 +79,43 @@ ActiveRecord::Schema.define(:version => 20110302200450) do
     t.datetime "updated_at"
   end
 
+  create_table "headquators", :force => true do |t|
+    t.string   "head_quator"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "msrplanners", :force => true do |t|
+    t.integer  "doctor_id"
+    t.integer  "tft"
+    t.integer  "tfs"
+    t.integer  "ofs"
+    t.integer  "ofc"
+    t.integer  "lac"
+    t.integer  "lacg"
+    t.integer  "vrx"
+    t.integer  "utr"
+    t.integer  "lux"
+    t.integer  "mus"
+    t.integer  "nurxl"
+    t.integer  "cof"
+    t.integer  "ele"
+    t.integer  "eld"
+    t.integer  "input_open"
+    t.integer  "input_receive"
+    t.integer  "input_available"
+    t.integer  "input_utilize"
+    t.integer  "input_closing"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "places", :force => true do |t|
+    t.string   "place"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
     t.string   "real_name"
@@ -103,6 +140,16 @@ ActiveRecord::Schema.define(:version => 20110302200450) do
     t.text     "description"
     t.string   "field_type",  :default => "string"
     t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tour_programs", :force => true do |t|
+    t.integer  "place_id"
+    t.integer  "headquator_id"
+    t.string   "distances"
+    t.string   "fare"
+    t.integer  "no_of_doctors"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

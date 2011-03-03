@@ -1,0 +1,31 @@
+<h1>Listing tour_programs</h1>
+
+<table>
+  <tr>
+    <th>Place</th>
+    <th>Headquator</th>
+    <th>Distances</th>
+    <th>Fare</th>
+    <th>No of doctors</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tour_programs.each do |tour_program| %>
+  <tr>
+    <td><%= tour_program.place %></td>
+    <td><%= tour_program.headquator %></td>
+    <td><%= tour_program.distances %></td>
+    <td><%= tour_program.fare %></td>
+    <td><%= tour_program.no_of_doctors %></td>
+    <td><%= link_to 'Show', tour_program %></td>
+    <td><%= link_to 'Edit', edit_tour_program_path(tour_program) %></td>
+    <td><%= link_to 'Destroy', tour_program, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tour program', new_tour_program_path %>

@@ -1,0 +1,2 @@
+module HeadquatorsHelper
+end

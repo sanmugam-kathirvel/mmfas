@@ -1,0 +1,47 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  doctor: 
+  doctor: 
+  tft: 1
+  tfs: 1
+  ofs: 1
+  ofc: 1
+  lac: 1
+  lacg: 1
+  vrx: 1
+  utr: 1
+  lux: 1
+  mus: 1
+  nurxl: 1
+  cof: 1
+  ele: 1
+  eld: 1
+  input_open: 1
+  input_receive: 1
+  input_available: 1
+  input_utilize: 1
+  input_closing: 1
+
+two:
+  doctor: 
+  doctor: 
+  tft: 1
+  tfs: 1
+  ofs: 1
+  ofc: 1
+  lac: 1
+  lacg: 1
+  vrx: 1
+  utr: 1
+  lux: 1
+  mus: 1
+  nurxl: 1
+  cof: 1
+  ele: 1
+  eld: 1
+  input_open: 1
+  input_receive: 1
+  input_available: 1
+  input_utilize: 1
+  input_closing: 1

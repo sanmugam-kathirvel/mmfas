@@ -1,0 +1,55 @@
+<html> 
+<head> 
+</head> 
+<body> 
+<h1>Listing tour_programs</h1>
+<center> 
+<table border=0>
+<tr> 
+  <td width="150" height="15" align=left >Name :</td> 
+  <td width="300" height="15" align=center ></td> 
+  <td width="100" height="15" align=center ><td> 
+  <td width="150" height="15" align=center ></td> 
+  <td width="150" height="15" align=left >H.Q. :</td> 
+  <td width="200" height="15" align=center ></td> 
+</tr> 
+</table>
+<table border=1> 
+<tr> 
+  <td width="150" height="15" align=center ></td> 
+  <td width="300" height="15" align=center >Place</td> 
+  <td width="100" height="15" align=center >HQ<br/>EX.BQ<br/>Out stn.</td> 
+  <td width="150" height="15" align=center >Distance from<br/>HQ / Out stn.<br/>(one way)</td> 
+  <td width="150" height="15" align=center >Fare<br/>(as per<br/>Travel Policy)</td> 
+  <td width="200" height="15" align=center >No. of Doctors</td> 
+</tr> 
+<% faretotal=0 %>
+<% doctotal=0 %>
+<% @tour_programs.each_with_index do |tour_program,index| %>
+  <tr>
+    <td width="150" height="15" align=center ><%= index+1 %>
+    <td width="150" height="15" align=center><%= tour_program.place.place %></td>
+    <td width="150" height="15" align=center><%= tour_program.headquator.head_quator %></td>
+    <td width="150" height="15" align=center><%= tour_program.distances %></td>
+    <td width="150" height="15" align=center><%= tour_program.fare %></td>
+    <td width="150" height="15" align=center><%= tour_program.no_of_doctors %></td>
+    <td><%= link_to 'Show', tour_program %></td>
+    <td><%= link_to 'Edit', edit_tour_program_path(tour_program) %></td>
+    <td><%= link_to 'Destroy', tour_program, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% faretotal=faretotal+tour_program.fare.to_i %>
+    <% doctotal=doctotal+tour_program.no_of_doctors.to_i %>
+  </tr>
+<% end %>
+<tr> 
+  <td width="150" height="60" align=left colspan=3 rowspan=2 >AM's Signature :</br>RM's Signature :</td> 
+  <td width="150" height="15" align=center >Total</td> 
+  <td width="150" height="15" align=center ><%= faretotal %></td> 
+  <td width="200" height="15" align=center ><%= doctotal %></td> 
+</tr> 
+<tr>
+<td width="150" height="15" align=left colspan=3 rowspan=2 >SM's Signature :</td> 
+</tr>
+</table>
+</body> 
+</html>
+<%= link_to 'New Tour program', new_tour_program_path %>

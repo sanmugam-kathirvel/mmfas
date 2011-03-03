@@ -1,0 +1,23 @@
+<h1>Listing headquators</h1>
+
+<table>
+  <tr>
+    <th>Head quator</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @headquators.each do |headquator| %>
+  <tr>
+    <td><%= headquator.head_quator %></td>
+    <td><%= link_to 'Show', headquator %></td>
+    <td><%= link_to 'Edit', edit_headquator_path(headquator) %></td>
+    <td><%= link_to 'Destroy', headquator, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Headquator', new_headquator_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  place: 
+  headquator: 
+  distances: MyString
+  fare: MyString
+  no_of_doctors: 1
+
+two:
+  place: 
+  headquator: 
+  distances: MyString
+  fare: MyString
+  no_of_doctors: 1

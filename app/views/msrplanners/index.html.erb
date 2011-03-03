@@ -1,0 +1,302 @@
+<html>
+<head>
+</head>
+<body>
+<h1><center>MSR Daily Call Planner</center></h1>
+<center>
+<table border=1>
+<tr>
+  <td width="45" height="15" align=center>Name</td>
+  <td width="45" height="15" align=center colspan=3></td>
+  <td width="45" height="15" align=center>H.Q.</td>
+  <td width="45" height="15" align=center colspan=5></td>
+  <td width="45" height="15" align=center colspan=4>Territory code</td>
+  <td width="45" height="15" align=center colspan=2></td>
+  <td width="45" height="15" align=center colspan=6>Place of work:</td>
+  <td width="45" height="15" align=center colspan=2>Date:</td>
+  </tr>
+<tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" align=center>HQ</td>
+  <td width="45" height="15" align=center>Ex.HQ</td>
+  <td width="45" height="15" align=center>OS</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" rowspan=2 align=center>TFT</td>
+  <td width="45" height="15" rowspan=2 align=center>TFS</td>
+  <td width="45" height="15" rowspan=2 align=center>OFS</td>
+  <td width="45" height="15" rowspan=2 align=center>OFC</td>
+  <td width="45" height="15" rowspan=2 align=center>LAC</td>
+  <td width="45" height="15" rowspan=2 colspan=1 align=center>LAC G</td>
+  <td width="45" height="15" rowspan=2 align=center>VRX</td>
+  <td width="45" height="15" rowspan=2 align=center>UTR</td>
+  <td width="45" height="15" rowspan=2 align=center>LUK</td>
+  <td width="45" height="15" rowspan=2 align=center>MUS</td>
+  <td width="45" height="15" rowspan=2 colspan=1 align=center>NUR XL</td>
+  <td width="45" height="15" rowspan=2 align=center>COF</td>
+  <td width="45" height="15" rowspan=2 align=center>ELE</td>
+  <td width="45" height="15" rowspan=2 align=center>ELD</td>
+  <td width="45" height="15" rowspan=2></td>
+  <td width="45" height="15" rowspan=2></td>
+  <td width="45" height="15" rowspan=2></td>
+  <td width="45" height="15" rowspan=2></td>
+  <td width="45" height="15" rowspan=2>./(or)x</td>  
+</tr>
+<tr>
+  <td width="45" height="15">SVL.NO.</td>
+  <td width="45" height="15" colspan=3 align=center>Doctor's Name</td>
+  <td width="45" height="15" align=center>SPL</td>
+</tr>
+<% @msrplanners.each_with_index do |msrplanner,index| %>
+  <tr>
+    <td width="45" height="15" align=center><%= index+1 %></td>
+    <td colspan=3 width="45" height="15" align=center><%= msrplanner.doctor.name %></td>
+    <td width="45" height="15" align=center><%= msrplanner.doctor.doctor_type %></td>
+    <td width="45" height="15" align=center><%= msrplanner.tft %></td>
+    <td width="45" height="15" align=center><%= msrplanner.tfs %></td>
+    <td width="45" height="15" align=center><%= msrplanner.ofs %></td>
+    <td width="45" height="15" align=center><%= msrplanner.ofc %></td>
+    <td width="45" height="15" align=center><%= msrplanner.lac %></td>
+    <td width="45" height="15" align=center><%= msrplanner.lacg %></td>
+    <td width="45" height="15" align=center><%= msrplanner.vrx %></td>
+    <td width="45" height="15" align=center><%= msrplanner.utr %></td>
+    <td width="45" height="15" align=center><%= msrplanner.lux %></td>
+    <td width="45" height="15" align=center><%= msrplanner.mus %></td>
+    <td width="45" height="15" align=center><%= msrplanner.nurxl %></td>
+    <td width="45" height="15" align=center><%= msrplanner.cof %></td>
+    <td width="45" height="15" align=center><%= msrplanner.ele %></td>
+    <td width="45" height="15" align=center><%= msrplanner.eld %></td>
+    <td width="45" height="15" align=center><%= msrplanner.input_open %></td>
+    <td width="45" height="15" align=center><%= msrplanner.input_receive %></td>
+    <td width="45" height="15" align=center><%= msrplanner.input_available %></td>
+    <td width="45" height="15" align=center><%= msrplanner.input_utilize %></td>
+    <td width="45" height="15" align=center><%= msrplanner.input_closing %></td>
+    <td width="45" height="15" align=center><%= link_to 'Show', msrplanner %></td>
+    <td width="45" height="15" align=center><%= link_to 'Edit', edit_msrplanner_path(msrplanner) %></td>
+    <td width="45" height="15" align=center><%= link_to 'Destroy', msrplanner, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<tr>
+  <td width="45" height="15" colspan=5 align=center>Input opening balance B/F</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+</tr>
+<tr>
+  <td width="45" height="15" colspan=5 align=center>Input received today</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+</tr>
+<tr>
+  <td width="45" height="15" colspan=5 align=center>Total input available</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+</tr>
+<tr>
+  <td width="45" height="15" colspan=5 align=center>Input utilised today</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+</tr>
+<tr>
+  <td width="45" height="15" colspan=5 align=center>Input closing balance today C/F</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+</tr>
+<tr>
+  <td width="45" height="15" colspan=5></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+</tr>
+<tr>
+  <td width="45" height="15" align=center>RCL NO</td>
+  <td width="45" height="15" colspan=2 align=center>Chemists Name</td>
+  <td width="45" height="15" align=center>./(or)x</td>
+  <td width="45" height="15" align=center>Order Value</td>
+  <td width="45" height="15" colspan=5 align=center>Stockist Visited</td>
+  <td width="45" height="15" colspan=2 align=center>value</td>
+  <td width="45" height="15" colspan=8 align=center>Work summary</td>
+  <td width="45" height="15" colspan=4 align=center></td>
+  </tr>
+  <tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=5></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=4 align=center>Doctors</td>
+  <td width="45" height="15" align=center>Chem</td>
+  <td width="45" height="15" colspan=2 align=center>POB Value</td>
+  <td width="45" height="15" colspan=4 rowspan=4 align=center></br></br></br></br>MSR Signature/Date</td>
+  <tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=5></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2 align=center>MRC</td>
+  <td width="45" height="15" colspan=2 align=center>SVC</td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+ </tr>
+ <tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=5></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15" align=center>S/F</td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+ </tr>
+ <tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=5></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15" align=center>Today</td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+ </tr>
+ <tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=5></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15" align=center>C/F</td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15" colspan=4 rowspan=3 valign=top align=center>Filled DCR Received on           <p align=center> RO/AM</td>
+ </tr>
+ <tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=15 rowspan=2 align=center> Original -RM/DM,1st,2nd Copy-HQ,3rd Copy-File</td>
+  </tr>
+  <tr>
+  <td width="45" height="15"></td>
+  <td width="45" height="15" colspan=2></td>
+  <td width="45" height="15"></td>
+  <td width="45" height="15"></td>
+  </tr>
+  </table>
+  </center>
+</body
+</html>
+<%= link_to 'New Msrplanner', new_msrplanner_path %>

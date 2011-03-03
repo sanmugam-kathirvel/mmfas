@@ -1,5 +1,13 @@
 Rails3::Application.routes.draw do
 
+  resources :msrplanners
+
+  resources :tour_programs
+
+  resources :headquators
+
+  resources :places
+
   namespace :admin do resources :classifydoctors end
 
   resources :classifydoctors

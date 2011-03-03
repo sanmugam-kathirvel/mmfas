@@ -1,0 +1,63 @@
+<h1>Listing msrplanners</h1>
+
+<table>
+  <tr>
+    <th>Doctor</th>
+    <th>Doctor</th>
+    <th>Tft</th>
+    <th>Tfs</th>
+    <th>Ofs</th>
+    <th>Ofc</th>
+    <th>Lac</th>
+    <th>Lacg</th>
+    <th>Vrx</th>
+    <th>Utr</th>
+    <th>Lux</th>
+    <th>Mus</th>
+    <th>Nurxl</th>
+    <th>Cof</th>
+    <th>Ele</th>
+    <th>Eld</th>
+    <th>Input open</th>
+    <th>Input receive</th>
+    <th>Input available</th>
+    <th>Input utilize</th>
+    <th>Input closing</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @msrplanners.each do |msrplanner| %>
+  <tr>
+    <td><%= msrplanner.doctor %></td>
+    <td><%= msrplanner.doctor %></td>
+    <td><%= msrplanner.tft %></td>
+    <td><%= msrplanner.tfs %></td>
+    <td><%= msrplanner.ofs %></td>
+    <td><%= msrplanner.ofc %></td>
+    <td><%= msrplanner.lac %></td>
+    <td><%= msrplanner.lacg %></td>
+    <td><%= msrplanner.vrx %></td>
+    <td><%= msrplanner.utr %></td>
+    <td><%= msrplanner.lux %></td>
+    <td><%= msrplanner.mus %></td>
+    <td><%= msrplanner.nurxl %></td>
+    <td><%= msrplanner.cof %></td>
+    <td><%= msrplanner.ele %></td>
+    <td><%= msrplanner.eld %></td>
+    <td><%= msrplanner.input_open %></td>
+    <td><%= msrplanner.input_receive %></td>
+    <td><%= msrplanner.input_available %></td>
+    <td><%= msrplanner.input_utilize %></td>
+    <td><%= msrplanner.input_closing %></td>
+    <td><%= link_to 'Show', msrplanner %></td>
+    <td><%= link_to 'Edit', edit_msrplanner_path(msrplanner) %></td>
+    <td><%= link_to 'Destroy', msrplanner, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Msrplanner', new_msrplanner_path %>
