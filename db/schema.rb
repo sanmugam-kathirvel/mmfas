@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110303104330) do
+ActiveRecord::Schema.define(:version => 20110303151729) do
 
   create_table "admin_classifydoctors", :force => true do |t|
     t.integer  "town_id"
@@ -56,6 +56,12 @@ ActiveRecord::Schema.define(:version => 20110303104330) do
     t.datetime "updated_at"
   end
 
+  create_table "calls", :force => true do |t|
+    t.string   "type_of_call"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "classifydoctors", :force => true do |t|
     t.integer  "town_id"
     t.integer  "ophthalmologist"
@@ -77,10 +83,17 @@ ActiveRecord::Schema.define(:version => 20110303104330) do
     t.string   "doctor_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "address"
   end
 
   create_table "headquators", :force => true do |t|
     t.string   "head_quator"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "months", :force => true do |t|
+    t.date     "month"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -110,8 +123,36 @@ ActiveRecord::Schema.define(:version => 20110303104330) do
     t.datetime "updated_at"
   end
 
+  create_table "personaldatas", :force => true do |t|
+    t.string   "head_quators_name"
+    t.text     "head_quators_address"
+    t.integer  "land_line"
+    t.integer  "mobile_no"
+    t.string   "name_of_am"
+    t.string   "mail"
+    t.integer  "am_land_line"
+    t.integer  "am_mobile_no"
+    t.string   "name_of_dm"
+    t.string   "dm_email"
+    t.integer  "dm_land_line"
+    t.integer  "dm_mobile_no"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "places", :force => true do |t|
     t.string   "place"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "pcode"
+    t.string   "pname"
+    t.string   "category"
+    t.date     "date_of_manufacture"
+    t.date     "date_of_expird"
+    t.integer  "maximum_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -142,6 +183,16 @@ ActiveRecord::Schema.define(:version => 20110303104330) do
     t.text     "value"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "standared_visits", :force => true do |t|
+    t.integer  "doctor_id"
+    t.integer  "call_id"
+    t.integer  "product_id"
+    t.integer  "month_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "amc"
   end
 
   create_table "tour_programs", :force => true do |t|

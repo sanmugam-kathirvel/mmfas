@@ -1,0 +1,41 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pcode %><br />
+    <%= f.text_field :pcode %>
+  </div>
+  <div class="field">
+    <%= f.label :pname %><br />
+    <%= f.text_field :pname %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_manufacture %><br />
+    <%= f.date_select :date_of_manufacture %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_expird %><br />
+    <%= f.date_select :date_of_expird %>
+  </div>
+  <div class="field">
+    <%= f.label :maximum_price %><br />
+    <%= f.text_field :maximum_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

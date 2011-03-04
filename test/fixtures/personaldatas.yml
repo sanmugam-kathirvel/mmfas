@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  head_quators_name: MyString
+  head_quators_address: MyText
+  land_line: 1
+  mobile_no: 1
+  name_of_am: MyString
+  mail: MyString
+  am_land_line: 1
+  am_mobile_no: 1
+  name_of_dm: MyString
+  dm_email: MyString
+  dm_land_line: 1
+  dm_mobile_no: 1
+
+two:
+  head_quators_name: MyString
+  head_quators_address: MyText
+  land_line: 1
+  mobile_no: 1
+  name_of_am: MyString
+  mail: MyString
+  am_land_line: 1
+  am_mobile_no: 1
+  name_of_dm: MyString
+  dm_email: MyString
+  dm_land_line: 1
+  dm_mobile_no: 1

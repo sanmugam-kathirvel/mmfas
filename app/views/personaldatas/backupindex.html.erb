@@ -1,0 +1,45 @@
+<h1>Listing personaldatas</h1>
+
+<table>
+  <tr>
+    <th>Head quators name</th>
+    <th>Head quators address</th>
+    <th>Land line</th>
+    <th>Mobile no</th>
+    <th>Name of am</th>
+    <th>Mail</th>
+    <th>Am land line</th>
+    <th>Am mobile no</th>
+    <th>Name of dm</th>
+    <th>Dm email</th>
+    <th>Dm land line</th>
+    <th>Dm mobile no</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @personaldatas.each do |personaldata| %>
+  <tr>
+    <td><%= personaldata.head_quators_name %></td>
+    <td><%= personaldata.head_quators_address %></td>
+    <td><%= personaldata.land_line %></td>
+    <td><%= personaldata.mobile_no %></td>
+    <td><%= personaldata.name_of_am %></td>
+    <td><%= personaldata.mail %></td>
+    <td><%= personaldata.am_land_line %></td>
+    <td><%= personaldata.am_mobile_no %></td>
+    <td><%= personaldata.name_of_dm %></td>
+    <td><%= personaldata.dm_email %></td>
+    <td><%= personaldata.dm_land_line %></td>
+    <td><%= personaldata.dm_mobile_no %></td>
+    <td><%= link_to 'Show', personaldata %></td>
+    <td><%= link_to 'Edit', edit_personaldata_path(personaldata) %></td>
+    <td><%= link_to 'Destroy', personaldata, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Personaldata', new_personaldata_path %>

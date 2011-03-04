@@ -10,6 +10,10 @@
   <%= @doctor.doctor_type %>
 </p>
 
+<p>
+  <b>Address:</b>
+  <%= @doctor.address %>
+</p>
 
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>

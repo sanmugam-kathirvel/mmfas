@@ -1,0 +1,65 @@
+<%= form_for(@personaldata) do |f| %>
+  <% if @personaldata.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personaldata.errors.count, "error") %> prohibited this personaldata from being saved:</h2>
+
+      <ul>
+      <% @personaldata.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :head_quators_name %><br />
+    <%= f.text_field :head_quators_name %>
+  </div>
+  <div class="field">
+    <%= f.label :head_quators_address %><br />
+    <%= f.text_field :head_quators_address %>
+  </div>
+  <div class="field">
+    <%= f.label :land_line %><br />
+    <%= f.text_field :land_line %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_no %><br />
+    <%= f.text_field :mobile_no %>
+  </div>
+  <div class="field">
+    <%= f.label :name_of_am %><br />
+    <%= f.text_field :name_of_am %>
+  </div>
+  <div class="field">
+    <%= f.label :mail %><br />
+    <%= f.text_field :mail %>
+  </div>
+  <div class="field">
+    <%= f.label :am_land_line %><br />
+    <%= f.text_field :am_land_line %>
+  </div>
+  <div class="field">
+    <%= f.label :am_mobile_no %><br />
+    <%= f.text_field :am_mobile_no %>
+  </div>
+  <div class="field">
+    <%= f.label :name_of_dm %><br />
+    <%= f.text_field :name_of_dm %>
+  </div>
+  <div class="field">
+    <%= f.label :dm_email %><br />
+    <%= f.text_field :dm_email %>
+  </div>
+  <div class="field">
+    <%= f.label :dm_land_line %><br />
+    <%= f.text_field :dm_land_line %>
+  </div>
+  <div class="field">
+    <%= f.label :dm_mobile_no %><br />
+    <%= f.text_field :dm_mobile_no %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

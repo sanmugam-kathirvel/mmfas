@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pcode: MyString
+  pname: MyString
+  category: MyString
+  date_of_manufacture: 2011-03-03
+  date_of_expird: 2011-03-03
+  maximum_price: 1
+
+two:
+  pcode: MyString
+  pname: MyString
+  category: MyString
+  date_of_manufacture: 2011-03-03
+  date_of_expird: 2011-03-03
+  maximum_price: 1

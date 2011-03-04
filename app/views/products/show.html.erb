@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pcode:</b>
+  <%= @product.pcode %>
+</p>
+
+<p>
+  <b>Pname:</b>
+  <%= @product.pname %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category %>
+</p>
+
+<p>
+  <b>Date of manufacture:</b>
+  <%= @product.date_of_manufacture %>
+</p>
+
+<p>
+  <b>Date of expird:</b>
+  <%= @product.date_of_expird %>
+</p>
+
+<p>
+  <b>Maximum price:</b>
+  <%= @product.maximum_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

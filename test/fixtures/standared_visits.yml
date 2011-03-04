@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  doctor: 
+  doctor: 
+  doctor: 
+  call: 
+  product: 
+  product: 
+  product: 
+  month: 
+
+two:
+  doctor: 
+  doctor: 
+  doctor: 
+  call: 
+  product: 
+  product: 
+  product: 
+  month: 

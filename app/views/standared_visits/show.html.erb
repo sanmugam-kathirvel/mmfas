@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Doctor Name:</b>
+  <%= @standared_visit.doctor.name %>
+</p>
+
+<p>
+  <b>Doctor Address:</b>
+  <%= @standared_visit.doctor.address %>
+</p>
+
+<p>
+  <b>Doctor Type:</b>
+  <%= @standared_visit.doctor.doctor_type %>
+</p>
+
+<p>
+  <b>Type of Call:</b>
+  <%= @standared_visit.call.type_of_call %>
+</p>
+
+<p>
+  <b>Product 1:</b>
+  <%= @standared_visit.product.pname %>
+</p>
+
+<p>
+  <b>Product 2:</b>
+  <%= @standared_visit.product.pname %>
+</p>
+
+<p>
+  <b>Product 3:</b>
+  <%= @standared_visit.product.pname %>
+</p>
+
+<p>
+  <b>Month:</b>
+  <%= @standared_visit.month.month %>
+</p>
+
+<p>
+  <b>Amc:</b>
+  <%= @standared_visit.amc %>
+</p>
+
+
+<%= link_to 'Edit', edit_standared_visit_path(@standared_visit) %> |
+<%= link_to 'Back', standared_visits_path %>

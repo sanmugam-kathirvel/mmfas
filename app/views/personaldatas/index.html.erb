@@ -1,0 +1,37 @@
+<html>
+<head>
+<body>
+<h1><center>PERSONAL DATA</center></h1> 
+<table border=0>
+<tr> 
+  <td align=left > &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; Name of MSR :</td> 
+</tr> 
+</table>
+<br/>
+<center> 
+<table border=1>
+<% @personaldatas.each do |personaldata| %>
+<tr> 
+<td width="1000" height="50" align=left >&nbsp; &nbsp; Head Quaters & Address : <%= personaldata.head_quators_name %>
+<%= personaldata.head_quators_address %> &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;   Landline:<%= personaldata.land_line %> &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; Mobile:<%= personaldata.mobile_no %> &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;</td>  
+</tr>
+<tr>
+<td width="1000" height="75" align=left >&nbsp; &nbsp;Name of AM:<%= personaldata.name_of_am %> </br> &nbsp; &nbsp;mailing address :<%= personaldata.mail %> &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   Landline:<%= personaldata.am_land_line %> &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; Mobile:<%= personaldata.am_mobile_no %> &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;</td>  
+</tr>
+
+<tr> 
+<td width="1000" height="75" align=left >&nbsp; &nbsp;Name of DM / RM / AM : <%= personaldata.name_of_dm %> </br> &nbsp; &nbsp;mailing address : <%= personaldata.dm_email %>&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   Landline:<%= personaldata.dm_land_line %> &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; Mobile:<%= personaldata.dm_mobile_no %> &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;</td>  
+<td><%= link_to 'Show', personaldata %></td>
+    <td><%= link_to 'Edit', edit_personaldata_path(personaldata) %></td>
+    <td><%= link_to 'Destroy', personaldata, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+<% end %>
+</table>
+<table border=1> 
+<tr>  
+</table>
+<%= link_to 'New Personaldata', new_personaldata_path %>
+</center> 
+</body>
+</html>
+

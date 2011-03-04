@@ -4,16 +4,16 @@
   <tr>
     <th>Name</th>
     <th>Doctor type</th>
-    <th></th>
+    <th>Address</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @doctors.each do |doctor| %>
   <tr>
-    <td><%= doctor.id %></td>
     <td><%= doctor.name %></td>
     <td><%= doctor.doctor_type %></td>
+    <td><%= doctor.address %></td>
     <td><%= link_to 'Show', doctor %></td>
     <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
     <td><%= link_to 'Destroy', doctor, :confirm => 'Are you sure?', :method => :delete %></td>

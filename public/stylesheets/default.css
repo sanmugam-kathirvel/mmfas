@@ -18,7 +18,7 @@ ul {padding-left: 2em; margin-left: 0}
 #tabs .with_space a, #tabs .with_space a.current {margin-right: 10px}
 #main {margin: 2em 0 0 3em}
 #left, #right, #right_kase {float: left}
-#left {background-color: #fff; width: 100%; background-image: url('/images/right-bg.gif'); background-position: right; background-repeat: repeat-y;}
+#left {background-color: #fff; width: 95%; background-image: url('/images/right-bg.gif'); background-position: right; background-repeat: repeat-y;}
 #left-kase {background-color: #fff; width: 98.5%}
 #left .head, #left-kase .head {color: #000; background-color: #d3dbff; padding: 1em 1.2em; margin: 0; font-size: 16px;;border-bottom: 0px solid #5b72a5; position: relative; background-image: url('/images/right-bg.gif'); background-position: right; background-repeat: repeat-y;}
 #left #screen, #left-kase #screen {padding: 0 1.5em 1.5em; position: relative; background: url('/images/right-bg.gif') right repeat-y;}

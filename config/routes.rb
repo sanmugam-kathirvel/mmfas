@@ -1,5 +1,15 @@
 Rails3::Application.routes.draw do
 
+  resources :personaldatas
+
+  resources :months
+
+  resources :products
+
+  resources :calls
+
+  resources :standared_visits
+
   resources :msrplanners
 
   resources :tour_programs

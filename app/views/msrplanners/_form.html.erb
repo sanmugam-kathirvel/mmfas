@@ -12,11 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :doctor %><br />
+    <%= f.label :doctor, 'Doctor name'
+ %><br />
     <%= f.collection_select :doctor_id, Doctor.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :doctor %><br />
+    <%= f.label :doctor ,'Doctor type' %><br />
     <%= f.collection_select :doctor_id, Doctor.all, :id, :doctor_type %>
   </div>
   <div class="field">
